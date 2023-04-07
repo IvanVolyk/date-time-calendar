@@ -21,7 +21,7 @@
 	<div class="container">
 		<?php
 
-    echo date('d') . ' ' . $month[date('n')-1] . ' ' . date('Y') . ' рік ' . $week[date('w')] . '<br>';
+    echo date('d') . ' ' . $month[date('n')-1] . ' ' . date('Y') . ' рік ' . $week[date('w')-1] . '<br>';
     echo $time;
 	
 ?>
