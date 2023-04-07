@@ -60,3 +60,31 @@ function getDay(date) {
 }
 
 createCalendar('.container');
+
+
+function updateTime() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var timeString = hours + ':' + minutes + ':' + seconds;
+  document.getElementById('time').innerHTML = timeString;
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      document.getElementById('time').innerHTML = xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open('GET', 'get_time.php', true);
+  xmlhttp.send();
+
+  setTimeout(updateTime, 100);
+}
+
+setTimeout(updateTime, 100);
+
+
+
+
+

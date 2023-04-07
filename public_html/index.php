@@ -1,5 +1,5 @@
 <?php
-    include('../includes/translate.php');
+include('../includes/translate.php');
 ?>
 
 
@@ -18,18 +18,19 @@
 <body>
 	<div class="row">
 		<div class="container"></div>
-	<div class="container">
-		<?php
+		<div class="container">
+			<?php
 
-    echo date('d') . ' ' . $month[date('n')-1] . ' ' . date('Y') . ' рік ' . $week[date('w')-1] . '<br>';
-    echo $time;
-	
-?>
-	</div>
+			echo date('d') . ' ' . $month[date('n')-1] . ' ' . date('Y') . ' рік ' . $week[date('w')-1] . '<br>';
+			?>
+		</div>
+		<div class="container">
+			<div id="time"></div>
+		</div>
 	</div>
 	
 
-<script src="scripts/script.js"></script>
+	<script src="scripts/script.js"></script>
 </body>
 </html>
 
